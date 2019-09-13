@@ -1,11 +1,36 @@
 @import "mixins.scss";
-
+@import "font.scss";
+html, body {
+    overflow: hidden;
+  }
 body {
-    @include size(100%, 2000px);
+    @include size(100%, 100vh);
     @extend %setup;
+    overflow-y: hidden;
+    background-color: #000;
+    position: relative;
+    @include flexMixin(center, center, column);
     #video-back {
-        width: 100%;
-        height: 100vh;
-        background-color: rgb(252, 85, 85);
+        margin-top: -50px;
+        @include size(100%, 100vh);
+        position: absolute;
+    }
+    #logo-box {
+        position: absolute;
+        @include flexMixin(center, center, column);
+        img {
+            @include size(35%, 35%);
+        }
+        .nav-button {
+            @extend %normalizeButton;
+            margin-top: 40px;
+            background-color: transparent;
+            color: rgb(209, 209, 209);
+            @extend %AlegreyaThin;
+            border: 0.2px solid rgb(153, 153, 153);
+            padding: 20px 60px;
+            @include font(20px, center);
+            cursor: pointer;
+        }
     }
 }

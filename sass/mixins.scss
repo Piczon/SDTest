@@ -8,6 +8,10 @@
     align-items: $align;
     flex-direction: $dir;
 }
+@mixin font($fSize, $align) {
+    font-size: $fSize;
+    text-align: $align;
+}
 %setup {
     margin: 0;
     padding: 0;
@@ -25,4 +29,8 @@
 }
 %borderRadius {
     border-radius: 5px;
+}
+%normalizeButton {
+    outline: none;
+    text-decoration: none;
 }
