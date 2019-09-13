@@ -51,11 +51,16 @@ body #logo-box .nav-button {
   margin-top: 40px;
   background-color: transparent;
   color: #d1d1d1;
-  border: 0.2px solid #999999;
-  padding: 20px 60px;
+  border: 0.1px solid #999999;
+  padding: 20px 80px;
   font-size: 20px;
   text-align: center;
   cursor: pointer;
+  transition: border 0.5s, background-color 0.5s;
+}
+body #logo-box .nav-button:hover {
+  border: 0.1px solid #757575;
+  background-color: rgba(0, 0, 0, 0.253);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -27,10 +27,15 @@ body {
             background-color: transparent;
             color: rgb(209, 209, 209);
             @extend %AlegreyaThin;
-            border: 0.2px solid rgb(153, 153, 153);
-            padding: 20px 60px;
+            border: 0.1px solid rgb(153, 153, 153);
+            padding: 20px 80px;
             @include font(20px, center);
             cursor: pointer;
+            transition: border 0.5s, background-color 0.5s;
+            &:hover {
+                border: 0.1px solid rgb(117, 117, 117);
+                background-color: rgba(0, 0, 0, 0.253);
+            }
         }
     }
 }
