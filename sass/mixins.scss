@@ -1,0 +1,23 @@
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin flexMixin($just, $align, $dir) {
+    display: flex;
+    justify-content: $just;
+    align-items: $align;
+    flex-direction: $dir;
+}
+%backgroundMax {
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+%fontWhite {
+    color: rgb(228, 228, 228);
+}
+%fontBlack {
+    color: rgb(39, 39, 39); 
+}
+%borderRadius {
+    border-radius: 5px;
+}
