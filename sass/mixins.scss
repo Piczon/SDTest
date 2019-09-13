@@ -8,6 +8,11 @@
     align-items: $align;
     flex-direction: $dir;
 }
+%setup {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 %backgroundMax {
     background-size: 100%;
     background-repeat: no-repeat;
