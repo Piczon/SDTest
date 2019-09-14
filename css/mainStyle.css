@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 
-body .navbar a {
+body #contact .social-media a, body #links .social-media a, body #links .links-box div a, body .navbar a {
   outline: none;
   text-decoration: none;
 }
@@ -31,7 +31,7 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: black;
-  color: #fff;
+  color: #dfdfdf;
 }
 body .navbar {
   width: 100%;
@@ -52,7 +52,7 @@ body .navbar a {
   color: aliceblue;
 }
 body .navbar img {
-  width: 10%;
+  width: 15%;
   height: auto;
   margin: 0 20px;
 }
@@ -82,6 +82,10 @@ body section {
   flex-direction: column;
 }
 body .section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   margin: 100px;
   border-top: 0.1px solid #2a271e;
   padding: 0 300px;
@@ -207,9 +211,66 @@ body #band .band-description {
   word-break: inherit;
   line-height: 25px;
 }
-body #contact {
-  width: 90%;
+body #links {
+  width: 100%;
   height: auto;
+  background-image: url("../file/img/ytheaderblack.jpg");
+  background-repeat: no-repeat;
+  background-size: fill;
+  background-position: center;
+  padding-bottom: 100px;
+}
+body #links .links-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+body #links .links-box div {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body #links .links-box div h2 {
+  font-size: 35px;
+  text-align: center;
+}
+body #links .links-box div a {
+  font-size: 25px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+}
+body #links .social-media {
+  margin-top: 50px;
+}
+body #links .social-media a {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  margin: 30px;
+}
+body #contact {
+  width: 100%;
+  height: auto;
+}
+body #contact p {
+  font-size: 20px;
+  text-align: center;
+}
+body #contact .social-media {
+  margin-top: 50px;
+}
+body #contact .social-media a {
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+  margin: 30px;
 }
 
 /*# sourceMappingURL=mainStyle.css.map */
