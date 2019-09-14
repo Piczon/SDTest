@@ -17,6 +17,7 @@ body {
         background-color: transparent; //transarent in future
         @include flexMixin(center, center, row);
         position: fixed;
+        transition: 0.5s;
         a {
             @extend %normalizeButton;
             @include font(20px, center);
@@ -31,6 +32,7 @@ body {
             margin: 20px;
         }
     }
+    
     nav {
         @include size(100%, 100vh);
         background-image: url("../file/img/banero.jpg");

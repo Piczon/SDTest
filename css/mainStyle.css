@@ -42,6 +42,7 @@ body .navbar {
   align-items: center;
   flex-direction: row;
   position: fixed;
+  transition: 0.5s;
 }
 body .navbar a {
   font-size: 20px;
