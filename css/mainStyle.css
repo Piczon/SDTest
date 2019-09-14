@@ -84,16 +84,13 @@ body section {
 body .section-title {
   margin: 100px;
   border-top: 0.1px solid #2a271e;
+  padding: 0 400px;
 }
 body .section-title h1 {
   font-size: 50px;
   text-align: center;
   letter-spacing: 20px;
   text-transform: uppercase;
-}
-body #tour .section-title {
-  width: 80%;
-  height: auto;
 }
 body #tour .table-box {
   width: 100%;
@@ -114,11 +111,20 @@ body #tour .table-box table .row th button {
   cursor: pointer;
 }
 body #music {
-  width: 70%;
+  width: 100%;
   height: auto;
+  background-image: url("../file/img/ytheaderblack.jpg");
+  background-repeat: no-repeat;
+  background-size: fill;
+  background-position: center;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 body #music .music-box {
-  width: 100%;
+  width: 80%;
   height: auto;
   display: flex;
   justify-content: space-around;
@@ -158,7 +164,6 @@ body #music .music-box .spotify-box {
 body #contact {
   width: 90%;
   height: auto;
-  background-color: #fff;
 }
 
 /*# sourceMappingURL=mainStyle.css.map */

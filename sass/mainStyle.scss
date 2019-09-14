@@ -56,6 +56,7 @@ body {
     .section-title {
         margin: 100px;
         border-top: 0.1px solid #2a271e;
+        padding: 0 400px;
         h1 {
             @extend %AlegreyaThin;
             @include font(50px, center);
@@ -65,9 +66,6 @@ body {
     }
 
     #tour {
-        .section-title {
-            @include size(80%, auto);
-        }
         .table-box {
             @include size(100%, auto);
             table {
@@ -92,9 +90,16 @@ body {
     }
 
     #music {
-        @include size(70%, auto);
+        @include size(100%, auto);
+        background-image: url("../file/img/ytheaderblack.jpg");
+        background-repeat: no-repeat;
+        background-size: fill;
+        background-position: center;
+        padding-bottom: 100px;
+        @include flexMixin(center, center, column);
+
         .music-box {
-            @include size(100%, auto);
+            @include size(80%, auto);
             @include flexMixin(space-around, center, row);
             .album-box {
                 @include size(50%, auto);
@@ -128,7 +133,7 @@ body {
 
     #contact {
         @include size(90%, auto);
-        background-color: #fff;
+        
         
     }
 }
