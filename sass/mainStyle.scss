@@ -8,27 +8,48 @@ html, body {
 body {
     @extend %setup;
     @include size(100%, auto);
-    
-
-    nav {
-        .navbar {
-            @include size(100%, 100px);
-            background-color: #000; //transarent in future
-            @include flexMixin(center, center, row);
-
-            a {
-                @extend %normalizeButton;
-                @include font(20px, center);
-                text-transform: uppercase;
-                @extend %AlegreyaThin;
-                margin: 20px;
-                color: aliceblue;
-            }
-
-            img {
-                @include size(10%, auto);
-                margin: 20px;
-            }
+    @include flexMixin(flex-start, center, column);
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    .navbar {
+        @include size(100%, 150px);
+        background-color: transparent; //transarent in future
+        @include flexMixin(center, center, row);
+        position: fixed;
+        a {
+            @extend %normalizeButton;
+            @include font(20px, center);
+            text-transform: uppercase;
+            @extend %AlegreyaThin;
+            margin: 20px;
+            color: aliceblue;
         }
+
+        img {
+            @include size(10%, auto);
+            margin: 20px;
+        }
+    }
+    nav {
+        @include size(100%, 100vh);
+        background-image: url("../file/img/banero.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+        @include flexMixin(center, center, column);
+        
+        iframe {
+            @include size(700px, 400px);
+        }
+    }
+    section {
+        @include size(80%, auto);
+    }
+
+
+    #contact {
+        @include size(90%, auto);
+        background-color: #fff;
     }
 }

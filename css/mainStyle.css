@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap");
-body nav .navbar a {
+body .navbar a {
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 300;
 }
@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 
-body nav .navbar a {
+body .navbar a {
   outline: none;
   text-decoration: none;
 }
@@ -22,27 +22,59 @@ html, body {
 body {
   width: 100%;
   height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  color: #fff;
 }
-body nav .navbar {
+body .navbar {
   width: 100%;
-  height: 100px;
-  background-color: #000;
+  height: 150px;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  position: fixed;
 }
-body nav .navbar a {
+body .navbar a {
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
   margin: 20px;
   color: aliceblue;
 }
-body nav .navbar img {
+body .navbar img {
   width: 10%;
   height: auto;
   margin: 20px;
+}
+body nav {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../file/img/banero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body nav iframe {
+  width: 700px;
+  height: 400px;
+}
+body section {
+  width: 80%;
+  height: auto;
+}
+body #contact {
+  width: 90%;
+  height: auto;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=mainStyle.css.map */
