@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap");
+body nav .navbar a {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body nav .navbar a {
+  outline: none;
+  text-decoration: none;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  height: auto;
+}
+body nav .navbar {
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+body nav .navbar a {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px;
+  color: aliceblue;
+}
+body nav .navbar img {
+  width: 10%;
+  height: auto;
+  margin: 20px;
+}
+
+/*# sourceMappingURL=mainStyle.css.map */

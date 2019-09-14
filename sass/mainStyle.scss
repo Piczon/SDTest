@@ -1,0 +1,34 @@
+@import "font.scss";
+@import "mixins.scss";
+
+html, body {
+    overflow-x: hidden;
+  }
+
+body {
+    @extend %setup;
+    @include size(100%, auto);
+    
+
+    nav {
+        .navbar {
+            @include size(100%, 100px);
+            background-color: #000; //transarent in future
+            @include flexMixin(center, center, row);
+
+            a {
+                @extend %normalizeButton;
+                @include font(20px, center);
+                text-transform: uppercase;
+                @extend %AlegreyaThin;
+                margin: 20px;
+                color: aliceblue;
+            }
+
+            img {
+                @include size(10%, auto);
+                margin: 20px;
+            }
+        }
+    }
+}
