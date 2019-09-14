@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap");
-body .navbar a {
+html, body {
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+body #music .music-box .album-box p, body #music .music-box .album-box h2 span, body #tour .table-box table .row .place, body #tour .table-box table .row .city, body .section-title h1, body .navbar a {
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 300;
 }
@@ -68,8 +72,87 @@ body nav iframe {
   height: 400px;
 }
 body section {
+  width: 70%;
+  height: auto;
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .section-title {
+  margin: 100px;
+  border-top: 0.1px solid #2a271e;
+}
+body .section-title h1 {
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+}
+body #tour .section-title {
   width: 80%;
   height: auto;
+}
+body #tour .table-box {
+  width: 100%;
+  height: auto;
+}
+body #tour .table-box table {
+  width: 100%;
+  height: auto;
+}
+body #tour .table-box table .row th {
+  padding-bottom: 50px;
+}
+body #tour .table-box table .row th button {
+  background-color: transparent;
+  color: #fff;
+  border: 0.1px solid #fff;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+body #music {
+  width: 70%;
+  height: auto;
+}
+body #music .music-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+body #music .music-box .album-box {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body #music .music-box .album-box img {
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+}
+body #music .music-box .album-box h2 {
+  font-size: 20px;
+  text-align: center;
+  line-height: 10px;
+}
+body #music .music-box .album-box p {
+  font-size: 15px;
+  text-align: center;
+}
+body #music .music-box .spotify-box {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 body #contact {
   width: 90%;

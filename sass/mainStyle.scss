@@ -3,6 +3,7 @@
 
 html, body {
     overflow-x: hidden;
+    @extend %Alegreya;
   }
 
 body {
@@ -44,12 +45,88 @@ body {
         }
     }
     section {
-        @include size(80%, auto);
+        @include size(70%, auto);
+        margin: 50px 0;
+        @include flexMixin(center, center, column);
+        
     }
+
+    .section-title {
+        margin: 100px;
+        border-top: 0.1px solid #2a271e;
+        h1 {
+            @extend %AlegreyaThin;
+            @include font(50px, center);
+            letter-spacing: 20px;
+            text-transform: uppercase;
+        }
+    }
+
+    #tour {
+        .section-title {
+            @include size(80%, auto);
+        }
+        .table-box {
+            @include size(100%, auto);
+            table {
+                @include size(100%, auto);
+                .row {
+                    .place, .city {
+                        @extend %AlegreyaThin;
+                    }
+                    th {
+                        padding-bottom: 50px;
+                        button {
+                            background-color: transparent;
+                            color: #fff;
+                            border: 0.1px solid #fff;
+                            padding: 10px 40px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #music {
+        @include size(70%, auto);
+        .music-box {
+            @include size(100%, auto);
+            @include flexMixin(space-around, center, row);
+            .album-box {
+                @include size(50%, auto);
+                @include flexMixin(center, center, column);
+                
+                img {
+                    @include size(300px, 300px);
+                    margin: 20px;
+                }
+                h2 {
+                    @include font(20px, center);
+                    line-height: 10px;
+                    span {
+                        @extend %AlegreyaThin;
+                    }
+                }
+                p {
+                    @extend %AlegreyaThin;
+                    @include font(15px, center);
+                }
+            }
+            .spotify-box {
+                @include size(50%, auto);
+                @include flexMixin(center, center, column);
+            }
+        }
+    }
+
+
 
 
     #contact {
         @include size(90%, auto);
         background-color: #fff;
+        
     }
 }
