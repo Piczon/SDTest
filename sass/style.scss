@@ -11,15 +11,18 @@ body {
     position: relative;
     @include flexMixin(center, center, column);
     #video-back {
-        margin-top: -50px;
-        @include size(100%, 100vh);
+
         position: absolute;
+        margin: 0 auto;
+        video {
+            @include size(100%, auto);
+        }
     }
     #logo-box {
         position: absolute;
         @include flexMixin(center, center, column);
         img {
-            @include size(35%, 35%);
+            @include size(35%, auto);
         }
         .nav-button {
             @extend %normalizeButton;
@@ -32,6 +35,17 @@ body {
             @include font(20px, center);
             cursor: pointer;
             transition: border 0.5s, background-color 0.5s;
+            @media screen and (max-width: 1000px) {
+                padding: 15px 50px;
+            }
+            @media screen and (max-width: 800px) {
+                padding: 10px 30px;
+                font-size: 15px;
+            }
+            @media screen and (max-width: 500px) {
+                padding: 5px 30px;
+                font-size: 10px;
+            }
             &:hover {
                 border: 0.1px solid rgb(117, 117, 117);
                 background-color: rgba(0, 0, 0, 0.253);
