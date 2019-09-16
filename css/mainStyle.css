@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap");
-html, body {
-  font-family: "Alegreya Sans", sans-serif;
-}
-
-body #band .band-box .left-panel p, body #music .music-box .album-box p, body #music .music-box .album-box h2 span, body #tour .table-box table .row .place, body #tour .table-box table .row .city, body .section-title h1, body .navbar a {
+body #band .band-box .left-panel p, body #music .music-box .album-box p, body #music .music-box .album-box h2 span, body #tour .table-box table .row .place, body #tour .table-box table .row .city, body .section-title h1, body .navbar-mobile .dropdown-box .dropdown-option a, body .navbar-desktop a {
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 300;
 }
@@ -14,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 
-body #contact .social-media a, body #links .social-media a, body #links .links-box div a, body .navbar a {
+body #contact .social-media a, body #links .social-media a, body #links .links-box div a, body .navbar-mobile .dropdown-box .dropdown-option a, body .navbar-mobile .nav-box .burger, body .navbar-desktop a {
   outline: none;
   text-decoration: none;
 }
@@ -33,7 +29,7 @@ body {
   background-color: black;
   color: #dfdfdf;
 }
-body .navbar {
+body .navbar-desktop {
   width: 100%;
   height: 150px;
   background-color: transparent;
@@ -44,17 +40,84 @@ body .navbar {
   position: fixed;
   transition: 0.5s;
 }
-body .navbar a {
+@media screen and (max-width: 800px) {
+  body .navbar-desktop {
+    display: none;
+  }
+}
+body .navbar-desktop a {
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
   margin: 0 20px;
   color: aliceblue;
 }
-body .navbar img {
+body .navbar-desktop img {
   width: 15%;
   height: auto;
   margin: 0 20px;
+}
+body .navbar-mobile {
+  width: 100%;
+  height: auto;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+}
+body .navbar-mobile .nav-box {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .navbar-mobile .nav-box .burger {
+  position: absolute;
+  left: 0;
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+body .navbar-mobile .nav-box .burger i {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+body .navbar-mobile .nav-box img {
+  width: 15%;
+  height: auto;
+  margin: 10px 20px;
+}
+body .navbar-mobile .dropdown-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  display: none;
+  background-color: #000;
+}
+body .navbar-mobile .dropdown-box .dropdown-option {
+  width: 100%;
+  height: 25px;
+  background-color: #000;
+  border: none;
+  margin: 10px;
+}
+body .navbar-mobile .dropdown-box .dropdown-option a {
+  font-size: 15px;
+  text-align: left;
+  letter-spacing: 3px;
+  color: #fff;
 }
 body nav {
   width: 100%;
@@ -71,6 +134,12 @@ body nav {
 body nav iframe {
   width: 700px;
   height: 400px;
+}
+@media screen and (max-width: 800px) {
+  body nav iframe {
+    width: 400px;
+    height: 200px;
+  }
 }
 body section {
   width: 70%;
@@ -135,6 +204,11 @@ body #music .music-box {
   align-items: center;
   flex-direction: row;
 }
+@media screen and (max-width: 800px) {
+  body #music .music-box {
+    flex-direction: column;
+  }
+}
 body #music .music-box .album-box {
   width: 50%;
   height: auto;
@@ -165,6 +239,11 @@ body #music .music-box .spotify-box {
   align-items: center;
   flex-direction: column;
 }
+@media screen and (max-width: 800px) {
+  body #music .music-box .spotify-box {
+    margin-top: 40px;
+  }
+}
 body #band {
   display: flex;
   justify-content: center;
@@ -178,6 +257,11 @@ body #band .band-box {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+@media screen and (max-width: 800px) {
+  body #band .band-box {
+    flex-direction: column;
+  }
 }
 body #band .band-box .left-panel {
   width: 50%;

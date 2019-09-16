@@ -3,7 +3,7 @@
 
 html, body {
     overflow-x: hidden;
-    @extend %Alegreya;
+    // @extend %Alegreya;
   }
 
 body {
@@ -12,12 +12,15 @@ body {
     @include flexMixin(flex-start, center, column);
     background-color: rgb(0, 0, 0);
     color: rgb(223, 223, 223);
-    .navbar {
+    .navbar-desktop {
         @include size(100%, 150px);
         background-color: transparent; //transarent in future
         @include flexMixin(center, center, row);
         position: fixed;
         transition: 0.5s;
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
         a {
             @extend %normalizeButton;
             @include font(20px, center);
@@ -32,6 +35,57 @@ body {
             margin: 0 20px;
         }
     }
+
+    .navbar-mobile {
+        @include size(100%, auto);
+        background-color: #000;
+        @include flexMixin(center, center, column);
+        position: fixed;
+        .nav-box {
+            @include size(100%, 75px);
+            @include flexMixin(center, center, column);
+            .burger {
+                position: absolute;
+                left: 0;
+                @include size(75px, 75px);
+                background-color: transparent;
+                border: none;
+                @extend %normalizeButton;
+                cursor: pointer;
+                user-select: none;
+                i {
+                    color: #fff;
+                    @include font(20px, center);
+                    
+                }
+            }
+            img {
+                @include size(15%, auto);
+                margin: 10px 20px;
+                
+            }
+        }
+        .dropdown-box {
+            @include size(100%, auto);
+            @include flexMixin(flex-start, flex-start, column);
+            padding: 10px;
+            display: none;
+            background-color: #000;
+            .dropdown-option {
+                @include size(100%, 25px);
+                background-color: #000;
+                border: none;
+                margin: 10px;
+                a {
+                    @include font(15px, left);
+                    letter-spacing: 3px;
+                    @extend %normalizeButton;
+                    color: #fff;
+                    @extend %AlegreyaThin;
+                }
+            }
+        }
+    }
     
     nav {
         @include size(100%, 100vh);
@@ -44,6 +98,9 @@ body {
         
         iframe {
             @include size(700px, 400px);
+            @media screen and (max-width: 800px) {
+                @include size(400px, 200px);
+            }
         }
     }
     section {
@@ -58,6 +115,7 @@ body {
         margin: 100px;
         border-top: 0.1px solid #2a271e;
         padding: 0 300px;
+        
         h1 {
             @extend %AlegreyaThin;
             @include font(50px, center);
@@ -102,6 +160,10 @@ body {
         .music-box {
             @include size(80%, auto);
             @include flexMixin(space-around, center, row);
+
+            @media screen and (max-width: 800px) {
+                flex-direction: column;
+            }
             .album-box {
                 @include size(50%, auto);
                 @include flexMixin(center, center, column);
@@ -125,6 +187,10 @@ body {
             .spotify-box {
                 @include size(50%, auto);
                 @include flexMixin(center, center, column);
+
+                @media screen and (max-width: 800px) {
+                    margin-top: 40px;
+                }
             }
         }
     }
@@ -133,7 +199,10 @@ body {
         @include flexMixin(center, center, column);
         .band-box {
             @include size(100%, auto);
-            @include flexMixin(center, center, row);    
+            @include flexMixin(center, center, row);  
+            @media screen and (max-width: 800px) {
+                flex-direction: column;
+            }  
             .left-panel {
                 @include size(50%, auto);
                 @include flexMixin(center, center, column);

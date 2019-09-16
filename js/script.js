@@ -1,5 +1,5 @@
 
-var navbar = document.querySelector(".navbar");
+let navbar = document.querySelector(".navbar-desktop");
 
 window.onscroll = function() {
     "use strict";
@@ -10,5 +10,24 @@ window.onscroll = function() {
     else {
         navbar.style.backgroundColor = "transparent";
         navbar.style.boxShadow = "none";
+    }
+}
+
+
+
+
+function dropdownMobile() {
+
+    let navbarMobile = document.querySelector(".navbar-mobile");
+    let dropdown = document.querySelector(".dropdown-box");
+    let dropdownState = window.getComputedStyle(dropdown, null).display;
+
+    if(dropdownState === "none") {
+        dropdown.style.display = "block";
+        
+    }
+    else {
+        dropdown.style.display = "none";
+        
     }
 }
