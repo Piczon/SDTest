@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&display=swap");
-body #band .band-box .left-panel p, body #music .music-box .album-box p, body #music .music-box .album-box h2 span, body #tour .table-box table .row .place, body #tour .table-box table .row .city, body .section-title h1, body .navbar-mobile .dropdown-box .dropdown-option a, body .navbar-desktop a {
+body #links .links-box div p, body #links .links-box div a, body #band .band-description, body #band .band-box .left-panel p, body #music .music-box .album-box p, body #music .music-box .album-box h2 span, body #tour .table-box table .row .place, body #tour .table-box table .row .city, body .section-title h1, body .navbar-mobile .dropdown-box .dropdown-option a, body .navbar-desktop a {
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 300;
+}
+
+body #links .links-box div h2, body #band .band-box .left-panel h2 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 700;
 }
 
 body {
@@ -31,7 +36,7 @@ body {
 }
 body .navbar-desktop {
   width: 100%;
-  height: 150px;
+  height: 100px;
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -53,7 +58,7 @@ body .navbar-desktop a {
   color: aliceblue;
 }
 body .navbar-desktop img {
-  width: 15%;
+  width: 10%;
   height: auto;
   margin: 0 20px;
 }
@@ -66,6 +71,12 @@ body .navbar-mobile {
   align-items: center;
   flex-direction: column;
   position: fixed;
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  body .navbar-mobile {
+    display: block;
+  }
 }
 body .navbar-mobile .nav-box {
   width: 100%;
@@ -94,6 +105,30 @@ body .navbar-mobile .nav-box img {
   width: 15%;
   height: auto;
   margin: 10px 20px;
+}
+@media screen and (max-width: 600px) {
+  body .navbar-mobile .nav-box img {
+    width: 20%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  body .navbar-mobile .nav-box img {
+    width: 25%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  body .navbar-mobile .nav-box img {
+    width: 30%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 300px) {
+  body .navbar-mobile .nav-box img {
+    width: 35%;
+    height: auto;
+  }
 }
 body .navbar-mobile .dropdown-box {
   width: 100%;
@@ -141,6 +176,12 @@ body nav iframe {
     height: 200px;
   }
 }
+@media screen and (max-width: 500px) {
+  body nav iframe {
+    width: 200px;
+    height: 100px;
+  }
+}
 body section {
   width: 70%;
   height: auto;
@@ -165,6 +206,16 @@ body .section-title h1 {
   letter-spacing: 20px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 600px) {
+  body .section-title h1 {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 400px) {
+  body .section-title h1 {
+    font-size: 25px;
+  }
+}
 body #tour .table-box {
   width: 100%;
   height: auto;
@@ -176,12 +227,28 @@ body #tour .table-box table {
 body #tour .table-box table .row th {
   padding-bottom: 50px;
 }
+@media screen and (max-width: 400px) {
+  body #tour .table-box table .row th {
+    font-size: 10px;
+  }
+}
 body #tour .table-box table .row th button {
   background-color: transparent;
   color: #fff;
   border: 0.1px solid #fff;
   padding: 10px 40px;
   cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  body #tour .table-box table .row th button {
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  body #tour .table-box table .row th button {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
 }
 body #music {
   width: 100%;
@@ -217,19 +284,40 @@ body #music .music-box .album-box {
   align-items: center;
   flex-direction: column;
 }
+@media screen and (max-width: 550px) {
+  body #music .music-box .album-box {
+    width: 100%;
+  }
+}
 body #music .music-box .album-box img {
   width: 300px;
   height: 300px;
   margin: 20px;
+}
+@media screen and (max-width: 400px) {
+  body #music .music-box .album-box img {
+    width: 200px;
+    height: 200px;
+  }
 }
 body #music .music-box .album-box h2 {
   font-size: 20px;
   text-align: center;
   line-height: 10px;
 }
+@media screen and (max-width: 400px) {
+  body #music .music-box .album-box h2 {
+    font-size: 15px;
+  }
+}
 body #music .music-box .album-box p {
   font-size: 15px;
   text-align: center;
+}
+@media screen and (max-width: 400px) {
+  body #music .music-box .album-box p {
+    font-size: 12px;
+  }
 }
 body #music .music-box .spotify-box {
   width: 50%;
@@ -271,9 +359,19 @@ body #band .band-box .left-panel {
   align-items: center;
   flex-direction: column;
 }
+@media screen and (max-width: 800px) {
+  body #band .band-box .left-panel {
+    width: 100%;
+  }
+}
 body #band .band-box .left-panel p {
   line-height: 2px;
   letter-spacing: 2px;
+}
+@media screen and (max-width: 400px) {
+  body #band .band-box .left-panel p {
+    font-size: 10px;
+  }
 }
 body #band .band-box .right-panel {
   width: 50%;
@@ -282,6 +380,11 @@ body #band .band-box .right-panel {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+@media screen and (max-width: 800px) {
+  body #band .band-box .right-panel {
+    width: 100%;
+  }
 }
 body #band .band-box .right-panel img {
   width: 60%;
@@ -294,6 +397,11 @@ body #band .band-description {
   text-align: center;
   word-break: inherit;
   line-height: 25px;
+}
+@media screen and (max-width: 400px) {
+  body #band .band-description {
+    font-size: 10px;
+  }
 }
 body #links {
   width: 100%;
@@ -312,6 +420,11 @@ body #links .links-box {
   align-items: center;
   flex-direction: row;
 }
+@media screen and (max-width: 400px) {
+  body #links .links-box {
+    flex-direction: column;
+  }
+}
 body #links .links-box div {
   width: 50%;
   height: auto;
@@ -324,11 +437,30 @@ body #links .links-box div h2 {
   font-size: 35px;
   text-align: center;
 }
+@media screen and (max-width: 400px) {
+  body #links .links-box div h2 {
+    font-size: 25px;
+  }
+}
 body #links .links-box div a {
   font-size: 25px;
   text-align: center;
   line-height: 50px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.562);
+}
+@media screen and (max-width: 400px) {
+  body #links .links-box div a {
+    font-size: 15px;
+  }
+}
+body #links .links-box div p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.562);
+}
+@media screen and (max-width: 400px) {
+  body #links .links-box div p {
+    font-size: 15px;
+  }
 }
 body #links .social-media {
   margin-top: 50px;
@@ -339,6 +471,12 @@ body #links .social-media a {
   color: #fff;
   margin: 30px;
 }
+@media screen and (max-width: 400px) {
+  body #links .social-media a {
+    font-size: 20px;
+    margin: 15px;
+  }
+}
 body #contact {
   width: 100%;
   height: auto;
@@ -346,6 +484,11 @@ body #contact {
 body #contact p {
   font-size: 20px;
   text-align: center;
+}
+@media screen and (max-width: 400px) {
+  body #contact p {
+    font-size: 10px;
+  }
 }
 body #contact .social-media {
   margin-top: 50px;
@@ -355,6 +498,12 @@ body #contact .social-media a {
   text-align: center;
   color: #fff;
   margin: 30px;
+}
+@media screen and (max-width: 400px) {
+  body #contact .social-media a {
+    font-size: 20px;
+    margin: 15px;
+  }
 }
 
 /*# sourceMappingURL=mainStyle.css.map */

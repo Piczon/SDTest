@@ -13,7 +13,7 @@ body {
     background-color: rgb(0, 0, 0);
     color: rgb(223, 223, 223);
     .navbar-desktop {
-        @include size(100%, 150px);
+        @include size(100%, 100px);
         background-color: transparent; //transarent in future
         @include flexMixin(center, center, row);
         position: fixed;
@@ -31,7 +31,7 @@ body {
         }
 
         img {
-            @include size(15%, auto);
+            @include size(10%, auto);
             margin: 0 20px;
         }
     }
@@ -41,6 +41,10 @@ body {
         background-color: #000;
         @include flexMixin(center, center, column);
         position: fixed;
+        display: none;
+        @media screen and (max-width: 800px) {
+            display: block;
+        }
         .nav-box {
             @include size(100%, 75px);
             @include flexMixin(center, center, column);
@@ -62,7 +66,18 @@ body {
             img {
                 @include size(15%, auto);
                 margin: 10px 20px;
-                
+                @media screen and (max-width: 600px) {
+                    @include size(20%, auto);
+                }
+                @media screen and (max-width: 500px) {
+                    @include size(25%, auto);
+                }
+                @media screen and (max-width: 400px) {
+                    @include size(30%, auto);
+                }
+                @media screen and (max-width: 300px) {
+                    @include size(35%, auto);
+                }
             }
         }
         .dropdown-box {
@@ -101,6 +116,10 @@ body {
             @media screen and (max-width: 800px) {
                 @include size(400px, 200px);
             }
+            @media screen and (max-width: 500px) {
+                @include size(200px, 100px);
+            }
+            
         }
     }
     section {
@@ -121,6 +140,13 @@ body {
             @include font(50px, center);
             letter-spacing: 20px;
             text-transform: uppercase;
+            @media screen and (max-width: 600px) {
+                font-size: 35px;
+            }
+            @media screen and (max-width: 400px) {
+                font-size: 25px;
+                
+            }
         }
     }
 
@@ -135,12 +161,23 @@ body {
                     }
                     th {
                         padding-bottom: 50px;
+                        @media screen and (max-width: 400px) {
+                            font-size: 10px;
+                        }
                         button {
                             background-color: transparent;
                             color: #fff;
                             border: 0.1px solid #fff;
                             padding: 10px 40px;
                             cursor: pointer;
+                            @media screen and (max-width: 700px) {
+                                padding: 10px 20px;
+                            }
+                            @media screen and (max-width: 400px) {
+                                font-size: 10px;
+                                padding: 5px 10px;
+                            }    
+                            
                         }
                     }
                 }
@@ -167,21 +204,33 @@ body {
             .album-box {
                 @include size(50%, auto);
                 @include flexMixin(center, center, column);
-                
+                @media screen and (max-width: 550px) {
+                    width: 100%;
+                }
                 img {
                     @include size(300px, 300px);
                     margin: 20px;
+                    @media screen and (max-width: 400px) {
+                        @include size(200px, 200px);
+                    } 
                 }
                 h2 {
                     @include font(20px, center);
                     line-height: 10px;
+                    @media screen and (max-width: 400px) {
+                        font-size: 15px;
+                    } 
                     span {
                         @extend %AlegreyaThin;
                     }
+                    
                 }
                 p {
                     @extend %AlegreyaThin;
                     @include font(15px, center);
+                    @media screen and (max-width: 400px) {
+                        font-size: 12px;
+                    } 
                 }
             }
             .spotify-box {
@@ -206,15 +255,28 @@ body {
             .left-panel {
                 @include size(50%, auto);
                 @include flexMixin(center, center, column);
+                @media screen and (max-width: 800px) {
+                    width: 100%;
+                }  
+                h2 {
+                    @extend %AlegreyaBold;
+                    
+                }
                 p {
                     line-height: 2px;
                     @extend %AlegreyaThin;
                     letter-spacing: 2px;
+                    @media screen and (max-width: 400px) {
+                        font-size: 10px;
+                    } 
                 }
             }
             .right-panel {
                 @include size(50%, auto);
                 @include flexMixin(center, center, column);
+                @media screen and (max-width: 800px) {
+                    width: 100%;
+                } 
                 img {
                     @include size(60%, 60%);
                 }
@@ -226,6 +288,10 @@ body {
             text-align: center;
             word-break: inherit;
             line-height: 25px;
+            @extend %AlegreyaThin;
+            @media screen and (max-width: 400px) {
+                font-size: 10px;
+            } 
         }
     }
 
@@ -239,25 +305,37 @@ body {
         .links-box {
             @include size(100%, auto);
             @include flexMixin(space-between, center, row);
-            
+            @media screen and (max-width: 400px) {
+                flex-direction: column;
+            }
             div {
                 @include size(50%, auto);
                 @include flexMixin(center, center, column);
                 h2 {
                     @include font(35px, center);
+                    @extend %AlegreyaBold;
+                    @media screen and (max-width: 400px) {
+                        font-size: 25px;
+                    } 
                 }
                 a {
                     @include font(25px, center);
                     line-height: 50px;
                     @extend %normalizeButton;
-                    color: #fff;
+                    color: rgba(255, 255, 255, 0.562);
+                    @extend %AlegreyaThin;
+                    @media screen and (max-width: 400px) {
+                        font-size: 15px;
+                    } 
                 }
-            }
-            .articles {
-                
-            }
-            .reviews {
-                
+                p {
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.562);
+                    @extend %AlegreyaThin;
+                    @media screen and (max-width: 400px) {
+                        font-size: 15px;
+                    } 
+                }
             }
         }
         .social-media {
@@ -267,7 +345,13 @@ body {
                 @extend %normalizeButton;
                 color: #fff;
                 margin: 30px;
+                @media screen and (max-width: 400px) {
+                    font-size: 20px;
+                    margin: 15px;
+                } 
             }
+            
+            
         }
     }
 
@@ -276,6 +360,9 @@ body {
         @include size(100%, auto);
         p {
             @include font(20px, center);
+            @media screen and (max-width: 400px) {
+                font-size: 10px;
+            }
         }
         
         .social-media {
@@ -285,6 +372,10 @@ body {
                 @extend %normalizeButton;
                 color: #fff;
                 margin: 30px;
+                @media screen and (max-width: 400px) {
+                    font-size: 20px;
+                    margin: 15px;
+                }
             }
         }
     }
