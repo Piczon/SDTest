@@ -12,6 +12,12 @@ body {
     @include flexMixin(flex-start, center, column);
     background-color: rgb(0, 0, 0);
     color: rgb(223, 223, 223);
+    background-image: url("../file/img/ytheaderblack.jpg");
+    background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
     .navbar-desktop {
         @include size(100%, 100px);
         background-color: transparent; //transarent in future
@@ -104,7 +110,7 @@ body {
     
     nav {
         @include size(100%, 100vh);
-        background-image: url("../file/img/banero.jpg");
+        // background-image: url("../file/img/ytheaderblack.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -187,7 +193,7 @@ body {
 
     #music {
         @include size(100%, auto);
-        background-image: url("../file/img/ytheaderblack.jpg");
+        // background-image: url("../file/img/ytheaderblack.jpg");
         background-repeat: no-repeat;
         background-size: fill;
         background-position: center;
@@ -297,7 +303,7 @@ body {
 
     #links {
         @include size(100%, auto);
-        background-image: url("../file/img/ytheaderblack.jpg");
+        // background-image: url("../file/img/ytheaderblack.jpg");
         background-repeat: no-repeat;
         background-size: fill;
         background-position: center;
