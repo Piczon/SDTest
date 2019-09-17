@@ -409,6 +409,7 @@ body #band .band-description {
 body #links {
   width: 100%;
   height: auto;
+  background-image: url("../file/img/ytheaderblack.jpg");
   background-repeat: no-repeat;
   background-size: fill;
   background-position: center;
