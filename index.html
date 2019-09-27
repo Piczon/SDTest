@@ -13,7 +13,10 @@
 </head>
 <body>
     <section id="video-back">
-        <video src="file/video/site.mp4" autoplay loop></video>
+        <video src="file/video/site.mp4" autoplay loop muted id="vid"></video>
+        <script>
+            document.getElementById('vid').play();
+        </script>
     </section>
     <section id="logo-box">
         <img src="file/img/SD logo-white-transparent background.png" alt="">
