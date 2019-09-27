@@ -11,7 +11,7 @@ body {
     position: relative;
     @include flexMixin(center, center, column);
     #video-back {
-
+        @include size(100%, auto);
         position: absolute;
         margin: 0 auto;
         video {
