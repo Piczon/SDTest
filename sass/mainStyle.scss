@@ -24,6 +24,7 @@ body {
         @include flexMixin(center, center, row);
         position: fixed;
         transition: 0.5s;
+        z-index: 10000;
         @media screen and (max-width: 800px) {
             display: none;
         }
@@ -48,6 +49,7 @@ body {
         @include flexMixin(center, center, column);
         position: fixed;
         display: none;
+        z-index: 10000;
         @media screen and (max-width: 800px) {
             display: block;
         }
@@ -114,16 +116,18 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        
         @include flexMixin(center, center, column);
         
         iframe {
             @include size(700px, 400px);
             @media screen and (max-width: 800px) {
-                @include size(400px, 200px);
+                @include size(500px, 300px);
+            }
+            @media screen and (max-width: 600px) {
+                @include size(400px, 25 0px);
             }
             @media screen and (max-width: 500px) {
-                @include size(200px, 100px);
+                @include size(300px, 400px);
             }
             
         }
