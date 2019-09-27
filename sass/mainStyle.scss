@@ -124,7 +124,7 @@ body {
                 @include size(500px, 300px);
             }
             @media screen and (max-width: 600px) {
-                @include size(400px, 25 0px);
+                @include size(400px, 250px);
             }
             @media screen and (max-width: 500px) {
                 @include size(300px, 400px);
@@ -149,6 +149,7 @@ body {
             @extend %AlegreyaThin;
             @include font(50px, center);
             letter-spacing: 20px;
+            
             text-transform: uppercase;
             @media screen and (max-width: 600px) {
                 font-size: 35px;
