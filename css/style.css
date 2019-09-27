@@ -36,6 +36,12 @@ body #video-back {
   position: absolute;
   margin: 0 auto;
 }
+@media screen and (max-width: 700px) {
+  body #video-back {
+    width: 200%;
+    height: auto;
+  }
+}
 body #video-back video {
   width: 100%;
   height: auto;
