@@ -54,7 +54,7 @@ body #logo-box {
   flex-direction: column;
 }
 body #logo-box img {
-  width: 35%;
+  width: 50%;
   height: auto;
 }
 body #logo-box .nav-button {

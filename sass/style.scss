@@ -25,7 +25,7 @@ body {
         position: absolute;
         @include flexMixin(center, center, column);
         img {
-            @include size(35%, auto);
+            @include size(50%, auto);
         }
         .nav-button {
             @extend %normalizeButton;
