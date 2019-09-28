@@ -18,7 +18,7 @@ window.onscroll = function() {
 
 function dropdownMobile() {
 
-    let navbarMobile = document.querySelector(".navbar-mobile");
+    
     let dropdown = document.querySelector(".dropdown-box");
     let dropdownState = window.getComputedStyle(dropdown, null).display;
 

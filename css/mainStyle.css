@@ -36,7 +36,6 @@ body {
   background-image: url("../file/img/ytheaderblack - Copy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   background-attachment: fixed;
 }
 body .navbar-desktop {
@@ -154,6 +153,7 @@ body .navbar-mobile .dropdown-box .dropdown-option {
   background-color: #000;
   border: none;
   margin: 10px;
+  text-align: left;
 }
 body .navbar-mobile .dropdown-box .dropdown-option a {
   font-size: 15px;
@@ -369,6 +369,7 @@ body #band .band-box .left-panel {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 @media screen and (max-width: 800px) {
   body #band .band-box .left-panel {
@@ -398,8 +399,8 @@ body #band .band-box .right-panel {
   }
 }
 body #band .band-box .right-panel img {
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
 }
 body #band .band-description {
   margin-top: 50px;

@@ -15,7 +15,7 @@ body {
         background-image: url("../file/img/ytheaderblack\ -\ Copy.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
+        
         background-attachment: fixed;
 
     .navbar-desktop {
@@ -99,6 +99,7 @@ body {
                 background-color: #000;
                 border: none;
                 margin: 10px;
+                text-align: left;
                 a {
                     @include font(15px, left);
                     letter-spacing: 3px;
@@ -266,6 +267,7 @@ body {
             .left-panel {
                 @include size(50%, auto);
                 @include flexMixin(center, center, column);
+                margin-bottom: 50px;
                 @media screen and (max-width: 800px) {
                     width: 100%;
                 }  
@@ -289,7 +291,7 @@ body {
                     width: 100%;
                 } 
                 img {
-                    @include size(60%, 60%);
+                    @include size(70%, 70%);
                 }
             }
         }
