@@ -36,6 +36,7 @@ body {
   background-image: url("../file/img/ytheaderblack - Copy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  image-rendering: optimizeQuality;
   background-attachment: fixed;
 }
 body .navbar-desktop {

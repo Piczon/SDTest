@@ -12,11 +12,11 @@ body {
     @include flexMixin(flex-start, center, column);
     background-color: rgb(0, 0, 0);
     color: rgb(223, 223, 223);
-        background-image: url("../file/img/ytheaderblack\ -\ Copy.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-        background-attachment: fixed;
+    background-image: url("../file/img/ytheaderblack\ -\ Copy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: optimizeQuality;
+    background-attachment: fixed;
 
     .navbar-desktop {
         @include size(100%, 100px);
