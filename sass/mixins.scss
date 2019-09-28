@@ -12,6 +12,11 @@
     font-size: $fSize;
     text-align: $align;
 }
+@mixin linearGradient($color1, $color2) {
+    background: linear-gradient(135deg, $color1 0%,$color2 93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 %setup {
     margin: 0;
     padding: 0;

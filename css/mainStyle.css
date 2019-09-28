@@ -62,9 +62,23 @@ body .navbar-desktop a {
   text-transform: uppercase;
   margin: 0 20px;
   color: aliceblue;
+  transition: color 0.5s;
 }
-body .navbar-desktop img {
-  width: 10%;
+body .navbar-desktop a:hover {
+  color: #9c9c9c;
+}
+body .navbar-desktop .button {
+  width: 300px;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+body .navbar-desktop .button img {
+  width: 70%;
   height: auto;
   margin: 0 20px;
 }
@@ -251,6 +265,11 @@ body #tour .table-box table .row th button {
   border: 0.1px solid #fff;
   padding: 10px 40px;
   cursor: pointer;
+  transition: color 0.5s, border-color 0.5s;
+}
+body #tour .table-box table .row th button:hover {
+  color: #9c9c9c;
+  border-color: #9c9c9c;
 }
 @media screen and (max-width: 700px) {
   body #tour .table-box table .row th button {
@@ -459,6 +478,10 @@ body #links .links-box div a {
   text-align: center;
   line-height: 50px;
   color: rgba(255, 255, 255, 0.562);
+  transition: color 0.5s;
+}
+body #links .links-box div a:hover {
+  color: dimgray;
 }
 @media screen and (max-width: 400px) {
   body #links .links-box div a {
@@ -468,6 +491,10 @@ body #links .links-box div a {
 body #links .links-box div p {
   text-align: center;
   color: rgba(255, 255, 255, 0.562);
+  transition: color 0.5s;
+}
+body #links .links-box div p:hover {
+  color: #9c9c9c;
 }
 @media screen and (max-width: 400px) {
   body #links .links-box div p {
@@ -482,6 +509,10 @@ body #links .social-media a {
   text-align: center;
   color: #fff;
   margin: 30px;
+  transition: color 0.5s;
+}
+body #links .social-media a:hover {
+  color: #9c9c9c;
 }
 @media screen and (max-width: 400px) {
   body #links .social-media a {
@@ -510,6 +541,10 @@ body #contact .social-media a {
   text-align: center;
   color: #fff;
   margin: 30px;
+  transition: color 0.5s;
+}
+body #contact .social-media a:hover {
+  color: #9c9c9c;
 }
 @media screen and (max-width: 400px) {
   body #contact .social-media a {

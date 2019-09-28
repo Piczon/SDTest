@@ -35,11 +35,22 @@ body {
             @extend %AlegreyaThin;
             margin: 0 20px;
             color: aliceblue;
+            transition: color 0.5s ;
+            
+            &:hover {
+                color: rgb(156, 156, 156);
+            }
         }
-
-        img {
-            @include size(10%, auto);
-            margin: 0 20px;
+        
+        .button {
+            @include size(300px, 100%);
+            background-color: transparent;
+            border: none;
+            @include flexMixin(center, center, row);
+            img {
+                @include size(70%, auto);
+                margin: 0 20px;
+            }
         }
     }
 
@@ -182,6 +193,11 @@ body {
                             border: 0.1px solid #fff;
                             padding: 10px 40px;
                             cursor: pointer;
+                            transition: color 0.5s, border-color 0.5s;
+                            &:hover {
+                                color: rgb(156, 156, 156);
+                                border-color: rgb(156, 156, 156);
+                            }
                             @media screen and (max-width: 700px) {
                                 padding: 10px 20px;
                             }
@@ -327,9 +343,11 @@ body {
                 h2 {
                     @include font(35px, center);
                     @extend %AlegreyaBold;
+
                     @media screen and (max-width: 400px) {
                         font-size: 25px;
                     } 
+
                 }
                 a {
                     @include font(25px, center);
@@ -337,6 +355,11 @@ body {
                     @extend %normalizeButton;
                     color: rgba(255, 255, 255, 0.562);
                     @extend %AlegreyaThin;
+                    transition: color 0.5s;
+                    &:hover {
+                        color: rgb(105, 105, 105);
+                        
+                    }
                     @media screen and (max-width: 400px) {
                         font-size: 15px;
                     } 
@@ -345,6 +368,11 @@ body {
                     text-align: center;
                     color: rgba(255, 255, 255, 0.562);
                     @extend %AlegreyaThin;
+                    transition: color 0.5s;
+                    &:hover {
+                        color: rgb(156, 156, 156);
+                        
+                    }
                     @media screen and (max-width: 400px) {
                         font-size: 15px;
                     } 
@@ -358,6 +386,11 @@ body {
                 @extend %normalizeButton;
                 color: #fff;
                 margin: 30px;
+                transition: color 0.5s;
+                &:hover {
+                    color: rgb(156, 156, 156);
+                    
+                }
                 @media screen and (max-width: 400px) {
                     font-size: 20px;
                     margin: 15px;
@@ -385,6 +418,11 @@ body {
                 @extend %normalizeButton;
                 color: #fff;
                 margin: 30px;
+                transition: color 0.5s;
+                &:hover {
+                    color: rgb(156, 156, 156);
+                    
+                }
                 @media screen and (max-width: 400px) {
                     font-size: 20px;
                     margin: 15px;
