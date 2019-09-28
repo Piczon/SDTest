@@ -10,6 +10,7 @@ body {
     background-color: #000;
     position: relative;
     @include flexMixin(center, center, column);
+    
     #video-back {
         @include size(100%, auto);
         position: absolute;
@@ -19,6 +20,8 @@ body {
         }
         video {
             @include size(100%, auto);
+            filter: blur(5px) brightness(0.3);
+            
         }
     }
     #logo-box {
