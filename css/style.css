@@ -57,6 +57,7 @@ body #logo-box {
 body #logo-box img {
   width: 50%;
   height: auto;
+  filter: brightness(0.9);
 }
 body #logo-box .nav-button {
   margin-top: 40px;

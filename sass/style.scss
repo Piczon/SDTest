@@ -29,6 +29,7 @@ body {
         @include flexMixin(center, center, column);
         img {
             @include size(50%, auto);
+            filter: brightness(0.9);
         }
         .nav-button {
             @extend %normalizeButton;
