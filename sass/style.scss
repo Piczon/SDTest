@@ -1,16 +1,37 @@
 @import "mixins.scss";
 @import "font.scss";
+
+@mixin linearGradient($color1, $color2) {
+    background: linear-gradient(135deg, $color1 0%,$color2 93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 html, body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #000;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
+
+h1 {
+    @include font(50px, center);
+    letter-spacing: 10px;
+    
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
 
 #showcase {
     @include size(100%, 100vh);
-    @include flexMixin(center, center, column);
     position: relative;
+    @include flexMixin(center, center, column);
     .video-box {
         @include size(70%, auto);
         @include flexMixin(center, center, column);
@@ -24,4 +45,47 @@ html, body {
             transform: translate(-50%, -50%);
         }
     }
+}
+#biography {
+    @include size(100%, auto);
+    @include flexMixin(center, center, column);
+    
+    p {
+        @include size(50%, auto);
+        @include font(20px, center);
+    }
+    
+}
+
+#press {
+    @include size(100%, auto);
+    @include flexMixin(center, center, column);
+    a {
+        margin: 20px;
+        @include font(20px, center);
+    }
+}
+#discography {
+    @include size(100%, auto);
+    @include flexMixin(center, center, column);
+    .row {
+        @include size(60%, 500px);
+        margin: 30px;
+        @include flexMixin(center, center, row);
+        .left {
+            @include size(50%, 100%);
+            @include flexMixin(center, center, column);
+            img {
+                @include size(400px, auto);
+            }
+        }
+        .right {
+            @include size(50%, 100%);
+            @include flexMixin(center, center, column);
+        }
+    }
+}
+#contact {
+    @include size(100%, auto);
+    @include flexMixin(center, center, column);
 }
