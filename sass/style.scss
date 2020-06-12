@@ -23,6 +23,7 @@ section {
 }
 
 h1 {
+    margin-right: -40px;
     @include font(70px, center);
     letter-spacing: 40px;
     font-weight: 100;
@@ -83,12 +84,10 @@ nav {
     @include size(100%, 100vh);
     @include flexMixin(center, flex-end, column);
     padding-right:0;
-    h1 {
+    h1, p {
         padding-right: 100px;
     }
-    p {
-        padding-right: 140px;
-    }
+    
 
 }
 
@@ -97,29 +96,51 @@ nav {
     @include flexMixin(center, center, column);
     a {
         margin: 20px;
-        @include font(20px, center);
+        @include font(40px, center);
     }
 }
 #discography {
     @include flexMixin(center, center, column);
+    @include size(100%, 100vh);
     .row {
-        @include size(60%, 500px);
-        margin: 30px;
-        @include flexMixin(center, center, row);
-        .left {
-            @include size(50%, 100%);
+        @include size(80%, auto);
+        @include flexMixin(space-around, flex-start, row);
+    }
+    .box {
+        @include size(50%, auto);
+        @include flexMixin(center, center, column);
+        .top {
+            @include size(100%, auto);
             @include flexMixin(center, center, column);
             img {
                 @include size(400px, auto);
             }
         }
-        .right {
-            @include size(50%, 100%);
+        .bottom {
+            @include size(100%, 100px);
             @include flexMixin(center, center, column);
+            h2 {
+                font-weight: 100;
+                font-style: italic;
+                @include font(15px, center);
+            }
         }
     }
 }
 #contact {
+    margin: 0;
+    padding: 0;
     @include size(100%, 100vh);
     @include flexMixin(center, center, column);
+    a {
+        margin: 10px;
+    }
+    p {
+        margin-top: 50px;
+    }
+}
+footer {
+    @include flexMixin(center, center, row);
+    @include font(8px, center);
+    margin-bottom: 10px;
 }

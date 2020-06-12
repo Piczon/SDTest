@@ -12,6 +12,7 @@ html, body {
 }
 
 h1 {
+  margin-right: -40px;
   font-size: 70px;
   text-align: center;
   letter-spacing: 40px;
@@ -96,11 +97,8 @@ nav a {
   flex-direction: column;
   padding-right: 0;
 }
-#members h1 {
+#members h1, #members p {
   padding-right: 100px;
-}
-#members p {
-  padding-right: 140px;
 }
 
 #press {
@@ -113,7 +111,7 @@ nav a {
 }
 #press a {
   margin: 20px;
-  font-size: 20px;
+  font-size: 40px;
   text-align: center;
 }
 
@@ -122,44 +120,77 @@ nav a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+  height: 100vh;
 }
 #discography .row {
-  width: 60%;
-  height: 500px;
-  margin: 30px;
+  width: 80%;
+  height: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
   flex-direction: row;
 }
-#discography .row .left {
+#discography .box {
   width: 50%;
-  height: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-#discography .row .left img {
+#discography .box .top {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#discography .box .top img {
   width: 400px;
   height: auto;
 }
-#discography .row .right {
-  width: 50%;
-  height: 100%;
+#discography .box .bottom {
+  width: 100%;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+#discography .box .bottom h2 {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 15px;
+  text-align: center;
+}
 
 #contact {
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+#contact a {
+  margin: 10px;
+}
+#contact p {
+  margin-top: 50px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 8px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
