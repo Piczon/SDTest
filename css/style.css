@@ -13,12 +13,52 @@ html, body {
 
 h1 {
   margin-right: -40px;
+  margin-bottom: 30px;
   font-size: 70px;
   text-align: center;
   letter-spacing: 40px;
   font-weight: 100;
   color: #a8a8a8;
   font-family: "Alegreya Sans", sans-serif;
+}
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 45px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 30px;
+    margin-right: -30px;
+  }
+}
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 20px;
+    margin-right: -20px;
+  }
+}
+@media screen and (max-width: 550px) {
+  h1 {
+    letter-spacing: 10px;
+    margin-right: -10px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 550px) {
+  p {
+    font-size: 10px;
+  }
 }
 
 a {
@@ -40,8 +80,30 @@ nav {
   flex-direction: row;
   background-color: rgba(0, 0, 0, 0.459);
 }
+@media screen and (max-width: 700px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: #000;
+  }
+}
 nav a {
   margin-right: 20px;
+}
+@media screen and (max-width: 1000px) {
+  nav a {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  nav a {
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+  }
 }
 
 #showcase {
@@ -80,12 +142,34 @@ nav a {
   flex-direction: column;
   padding-left: 100px;
 }
+@media screen and (max-width: 800px) {
+  #biography {
+    padding-left: 50px;
+  }
+}
 #biography p {
   width: 50%;
   height: auto;
   line-height: 2;
   font-size: 20px;
   text-align: left;
+}
+@media screen and (max-width: 1000px) {
+  #biography p {
+    font-size: 15px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #biography p {
+    width: 70%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  #biography p {
+    font-size: 10px;
+  }
 }
 
 #members {
@@ -100,6 +184,11 @@ nav a {
 #members h1, #members p {
   padding-right: 100px;
 }
+@media screen and (max-width: 800px) {
+  #members h1, #members p {
+    padding-right: 50px;
+  }
+}
 
 #press {
   width: 100%;
@@ -113,6 +202,17 @@ nav a {
   margin: 20px;
   font-size: 40px;
   text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  #press a {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  #press a {
+    font-size: 10px;
+  }
 }
 
 #discography {
@@ -131,6 +231,11 @@ nav a {
   align-items: flex-start;
   flex-direction: row;
 }
+@media screen and (max-width: 800px) {
+  #discography .row {
+    flex-direction: column;
+  }
+}
 #discography .box {
   width: 50%;
   height: auto;
@@ -138,6 +243,12 @@ nav a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+@media screen and (max-width: 800px) {
+  #discography .box {
+    width: 100%;
+    height: auto;
+  }
 }
 #discography .box .top {
   width: 100%;
@@ -150,6 +261,12 @@ nav a {
 #discography .box .top img {
   width: 400px;
   height: auto;
+}
+@media screen and (max-width: 1000px) {
+  #discography .box .top img {
+    width: 250px;
+    height: auto;
+  }
 }
 #discography .box .bottom {
   width: 100%;
@@ -165,6 +282,11 @@ nav a {
   font-size: 15px;
   text-align: center;
 }
+@media screen and (max-width: 550px) {
+  #discography .box .bottom h2 {
+    font-size: 10px;
+  }
+}
 
 #contact {
   margin: 0;
@@ -178,6 +300,11 @@ nav a {
 }
 #contact a {
   margin: 10px;
+}
+@media screen and (max-width: 550px) {
+  #contact a {
+    font-size: 10px;
+  }
 }
 #contact p {
   margin-top: 50px;
