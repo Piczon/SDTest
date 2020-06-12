@@ -12,14 +12,21 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     background-color: #000;
-    color: #fff;
+    color: rgb(168, 168, 168);
     font-family: 'Open Sans', sans-serif;
+    
+}
+
+section {
+    @include size(100%, 100vh);
 }
 
 h1 {
-    @include font(50px, center);
-    letter-spacing: 10px;
-    
+    @include font(70px, center);
+    letter-spacing: 40px;
+    font-weight: 100;
+    color: rgb(168, 168, 168);
+    font-family: 'Alegreya Sans', sans-serif;
 }
 a {
     text-decoration: none;
@@ -29,7 +36,6 @@ a {
 
 
 #showcase {
-    @include size(100%, 100vh);
     position: relative;
     @include flexMixin(center, center, column);
     .video-box {
@@ -47,18 +53,18 @@ a {
     }
 }
 #biography {
-    @include size(100%, auto);
-    @include flexMixin(center, center, column);
+    @include flexMixin(center, flex-start, column);
+    padding-left: 100px;
     
     p {
         @include size(50%, auto);
-        @include font(20px, center);
+        line-height: 2;
+        @include font(20px, left);
     }
     
 }
 
 #press {
-    @include size(100%, auto);
     @include flexMixin(center, center, column);
     a {
         margin: 20px;
@@ -66,7 +72,6 @@ a {
     }
 }
 #discography {
-    @include size(100%, auto);
     @include flexMixin(center, center, column);
     .row {
         @include size(60%, 500px);
@@ -86,6 +91,5 @@ a {
     }
 }
 #contact {
-    @include size(100%, auto);
     @include flexMixin(center, center, column);
 }
